@@ -254,7 +254,7 @@ public class GooglePlus extends CordovaPlugin implements ConnectionCallbacks, On
         mGoogleApiClient.connect();
       }
     } else {
-      this.savedCallbackContext.error("no valid token");
+      this.savedCallbackContext.error("no valid token (" +  result.getErrorCode() + ")");
     }
   }
 
